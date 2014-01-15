@@ -30,4 +30,5 @@ def zip_codes(string)
 end
 
 def hex_colors(string)
+  string.scan(/(?<=#)[0-9a-f]{6}/)
 end
