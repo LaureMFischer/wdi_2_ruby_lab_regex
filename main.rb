@@ -18,7 +18,7 @@ def valid_phone_numbers(string)
 end
 
 def area_codes(string)
-
+  string.scan(//)
 end
 
 def email_addresses(string)
@@ -26,6 +26,7 @@ def email_addresses(string)
 end
 
 def zip_codes(string)
+  string.scan(/(?<=\D)[0-9]{5}(?=\D)/)
 end
 
 def hex_colors(string)
