@@ -27,8 +27,10 @@ end
 
 def zip_codes(string)
   string.scan(/(?<=\D)\d{5}(?=\D)/)
+  # Anna's solution: string.scan(/\b\d{5}\b/)
 end
 
 def hex_colors(string)
-  string.scan(/(?<=#)[0-9a-f]{6}/)
+  string.scan(/(?<=#)[0-9a-f]{6}/) # Using positive look-behind
+  # Can also use character class \h #this is the equivalent of 0-9 and a-f, has all hex digits
 end
