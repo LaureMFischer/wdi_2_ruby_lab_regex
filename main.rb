@@ -6,25 +6,27 @@ def valid_ip_addresses(string)
 end
 
 def valid_mit_ip_addresses(string)
-  string.scan(/\b(?:18{1}\.){1}([0-9]{1,3}\.){2}([0-9]{1,3})\b/)
- # string.scan(/\b(18{1}\.){1}([0-9]{1,3}\.){2}[0-9]{1,3}\b/)
+  string.scan(/[1][8]\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/)
 end
 
-def non_mit_ip_addresses
+def non_mit_ip_addresses(string)
+  valid_ip_addresses(string) - valid_mit_ip_addresses(string)
 end
 
 def valid_phone_numbers(string)
   string.scan(/[2-9]{1}\d{0,2}\-\d{0,3}\-?\d{4}/).uniq
 end
 
-def area_codes
+def area_codes(string)
+
 end
 
-def email_addresses
+def email_addresses(string)
+  string.scan(/\w+@\w+\.com/)
 end
 
-def zip_codes
+def zip_codes(string)
 end
 
-def hex_colors
+def hex_colors(string)
 end
