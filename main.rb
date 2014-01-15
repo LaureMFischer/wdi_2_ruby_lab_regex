@@ -18,7 +18,7 @@ def valid_phone_numbers(string)
 end
 
 def area_codes(string)
-  string.scan(//)
+  string.scan(/[2-9][0-9][0-9](?=\-[0-9]{3}\-[0-9]{4})/).uniq
 end
 
 def email_addresses(string)
